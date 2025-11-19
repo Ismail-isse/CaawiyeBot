@@ -564,7 +564,7 @@
             margin-bottom: 1.5rem;
         }
 
-        /* Pricing Section */
+        /* Pricing Section Styles */
         .pricing {
             padding: 100px 0;
             background-color: var(--light);
@@ -580,7 +580,7 @@
         .pricing-card {
             flex: 1;
             min-width: 300px;
-            max-width: 400px;
+            max-width: 350px;
             background: white;
             border-radius: var(--border-radius);
             box-shadow: var(--shadow);
@@ -616,6 +616,20 @@
             font-size: 0.8rem;
             font-weight: 600;
             box-shadow: 0 4px 10px rgba(67, 97, 238, 0.3);
+        }
+
+        .value-badge {
+            position: absolute;
+            top: -12px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--success);
+            color: white;
+            padding: 8px 25px;
+            border-radius: 50px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            box-shadow: 0 4px 10px rgba(75, 181, 67, 0.3);
         }
 
         .pricing-header {
@@ -659,6 +673,24 @@
         .pricing-features .fa-times {
             color: var(--gray);
         }
+
+        /* Responsive adjustments */
+        @media (max-width: 1200px) {
+            .pricing-card {
+                min-width: 280px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            .pricing-card.featured {
+                transform: scale(1);
+            }
+            
+            .pricing-card.featured:hover {
+                transform: translateY(-10px);
+            }
+        }
+        
 
         /* Why Choose Section */
         .why-choose {
@@ -1128,4 +1160,5 @@
             .testimonial-card {
                 min-width: 280px;
             }
+
         }
